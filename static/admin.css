@@ -1,0 +1,455 @@
+
+.home-container {
+    display: flex;
+    height: 100vh;
+  }
+  /*admin display*/
+  .left-part {
+    width: 13%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: gainsboro;
+  }
+  
+  .middle-part {
+    width: 67%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  .right-part {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: gainsboro;
+    overflow-y: auto;
+  }
+
+
+
+
+  /*manager display*/
+
+  .left-part-manager {
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: gainsboro;
+  }
+  
+  .middle-part-manager {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  .product-form-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+  }
+
+
+  /*Dashboard styling*/
+
+  .category-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f0f0f0; 
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .category-name {
+    margin: 0;
+    color: #333; 
+  }
+
+  .category-buttons button {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    background-color: #3498db; 
+    color: #fff; 
+  }
+
+  .btn-danger {
+    background-color: #e74c3c; 
+    color: #fff; 
+  }
+
+
+  /* style for product*/
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-x: auto;
+  }
+  
+  .product-item {
+    width: 250px; 
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+    margin-left: 10px; 
+  }
+  .product-item-manager {
+    width: 250px; 
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+    margin-left: 10px; 
+  }
+
+  .product-box {
+    text-align: left; /* Adjust text alignment */
+  }
+  
+  .product-box h4 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .product-rate,
+  .product-quantity,
+  .product-manufactured-date,
+  .product-expiry-date {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .product-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  
+  .no-products-message {
+    text-align: center;
+    margin-top: 10px;
+    color: #777; 
+  }
+
+
+/*for updating the products*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px; /* Adjust the width as needed */
+  z-index: 1001;
+}
+
+.modal-content {
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+  
+
+
+
+
+
+/* For update modal in admin page*/
+
+  .update-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .update-form {
+    width: 400px; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+
+
+
+
+/* For approving and rejecting manager in the admin dashboard*/
+
+
+  .manager-row {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .manager-row:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .manager-info {
+    flex: 1;
+  }
+
+  .manager-info-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .manager-info-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .manager-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .manager-actions button {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* customer dashboard styling */
+
+  .product-box {
+    
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .product-list {
+    
+    overflow-y: auto;
+    
+  }
+  
+  .category-name {
+    color: #333;
+  }
+  
+  .product-item {
+    flex-basis: 15%;
+  }
+  
+  
+  
+ 
+  
+  /* Styling for the alert messages */
+  .alert {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+
+
+
+
+  
+  /* styles for the cart page here */
+  .cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .empty-cart-message {
+    font-size: 18px;
+    text-align: center;
+    color: #888;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-name {
+    font-size: 18px;
+  }
+  
+  .item-rate,
+  .item-quantity {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .item-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .total-price {
+    font-size: 16px;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+   
+  }
+  
+  .cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .summary-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .total-items,
+  .grand-total {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .checkout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+
+
+
+/* style for searchbox*/
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.search-button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
